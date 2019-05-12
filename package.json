@@ -6,11 +6,13 @@
   "keywords": [
     "ice-scaffold"
   ],
+  "homepage": "https://xiaolds.github.io/icework-test",
   "dependencies": {
     "@icedesign/base": "^0.2.3",
     "@icedesign/container": "^0.1.4",
     "bootstrap": "3.3.7",
     "chartist": "0.10.1",
+    "gh-pages": "^2.0.1",
     "prop-types": "^15.6.2",
     "react": "16.2.0",
     "react-bootstrap": "0.32.1",
@@ -38,6 +40,8 @@
     "webpack-plugin-import": "^0.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-app-rewired start",
